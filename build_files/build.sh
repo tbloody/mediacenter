@@ -11,6 +11,7 @@ set -ouex pipefail
 
 # this installs a package from fedora repos
 dnf5 install -y tmux 
+dnf5 install -y nvim 
 dnf5 install -y switchdesk 
 dnf5 install -y @xfce-desktop-environment
 
@@ -32,3 +33,4 @@ dnf5 -y remove rpmfusion-free-releas
 
 systemctl enable podman.socket
 switchdesk xfce
+startx
