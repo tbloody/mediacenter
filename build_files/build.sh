@@ -14,10 +14,18 @@ dnf5 install -y tmux
 dnf5 install -y xfce4-desktop
 
 # Use a COPR Example:
- dnf5 -y copr enable ublue-os/staging
- dnf5 -y install kodi
+# dnf5 -y copr enable ublue-os/staging
+# dnf5 -y install kodi
 # Disable COPRs so they don't end up enabled on the final image:
- dnf5 -y copr disable ublue-os/staging
+# dnf5 -y copr disable ublue-os/staging
+
+dnf -y install http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+#dnf -y install http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
+
+dnf -yy install kodi
+
+dnf5 -y remove rpmfusion-free-releas
+#dnf5 -y remove rpmfusion-nonfree-releas
 
 #### Example for enabling a System Unit File
 
