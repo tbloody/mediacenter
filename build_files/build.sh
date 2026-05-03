@@ -31,3 +31,4 @@ dnf5 -y remove rpmfusion-free-releas
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
+switchdesk xfce
