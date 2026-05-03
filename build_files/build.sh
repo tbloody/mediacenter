@@ -13,7 +13,7 @@ set -ouex pipefail
 dnf5 install -y tmux 
 dnf5 install -y Xorg
 dnf5 install -y startx
-dnf5 install -y xfce4-*
+dnf5 install -y @xfce-desktop-environment
 
 # Use a COPR Example:
 # dnf5 -y copr enable ublue-os/staging
