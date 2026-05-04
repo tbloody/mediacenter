@@ -29,6 +29,8 @@ dnf -yy install kodi
 dnf5 -y remove rpmfusion-free-releas
 #dnf5 -y remove rpmfusion-nonfree-releas
 
+sed 's/#logind-check-graphical.*/logind-check-graphical=true/g' -i /etc/lightdm/lightdm.conf
+
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
