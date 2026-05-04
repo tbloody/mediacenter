@@ -13,6 +13,7 @@ set -ouex pipefail
 dnf5 install -y tmux 
 dnf5 install -y nvim 
 dnf5 install -y switchdesk 
+dnf5 install -y lightdm
 dnf5 install -y @xfce-desktop-environment
 
 # Use a COPR Example:
