@@ -35,4 +35,3 @@ sed 's/#logind-check-graphical.*/logind-check-graphical=true/g' -i /etc/lightdm/
 
 systemctl enable podman.socket
 switchdesk xfce
-startx
