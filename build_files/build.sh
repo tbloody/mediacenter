@@ -2,11 +2,6 @@
 
 set -ouex pipefail
 
-#SE Linux changes as suggested by alerts 
-setsebool -P polyinstantiation_enabled 1
-ausearch -c 'systemd-logind' --raw | audit2allow -M my-systemdlogind
-semodule -X 300 -i my-systemdlogind.pp
-
 ### Install packages
 
 # Packages can be installed from any enabled yum repo on the image.
@@ -41,4 +36,9 @@ sed 's/#logind-check-graphical.*/logind-check-graphical=true/g' -i /etc/lightdm/
 
 systemctl enable podman.socket
 #switchdesk xfce
+
+#SE Linux changes as suggested by alerts 
+setsebool -P polyinstantiation_enabled 1
+ausearch -c 'systemd-logind' --raw | audit2allow -M my-systemdlogind
+semodule -X 300 -i my-systemdlogind.pp
 
