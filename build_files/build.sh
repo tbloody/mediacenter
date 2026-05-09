@@ -12,7 +12,7 @@ set -ouex pipefail
 # this installs a package from fedora repos
 dnf5 install -y tmux 
 dnf5 install -y nvim 
-dnf5 install -y switchdesk 
+#dnf5 install -y switchdesk 
 dnf5 install -y lightdm
 dnf5 install -y @xfce-desktop-environment
 
@@ -35,4 +35,5 @@ sed 's/#logind-check-graphical.*/logind-check-graphical=true/g' -i /etc/lightdm/
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
-switchdesk xfce
+#switchdesk xfce
+setsebool -P polyinstantiation_enabled 1
