@@ -1,0 +1,10 @@
+
+module my-systemdlogind 1.0;
+
+require {
+	type systemd_logind_t;
+	class cap_userns sys_ptrace;
+}
+
+#============= systemd_logind_t ==============
+allow systemd_logind_t self:cap_userns sys_ptrace;
