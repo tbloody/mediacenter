@@ -34,7 +34,7 @@ dnf -y install http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release
 
 dnf -yy install kodi
 
-dnf5 -y remove rpmfusion-free-release
+dnf5 -y remove rpmfusion-free-releas
 #dnf5 -y remove rpmfusion-nonfree-release
 
 #sed 's/#logind-check-graphical.*/logind-check-graphical=true/g' -i /etc/lightdm/lightdm.conf
