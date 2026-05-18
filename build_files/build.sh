@@ -13,39 +13,13 @@ set -ouex pipefail
 dnf5 install -y tmux 
 dnf5 install -y nvim 
 
-#dnf5 install -y lightdm
-#dnf5 install -y @xfce-desktop-environment
-#dnf5 install -y switchdesk 
-
 # Use a COPR Example:
+#
 # dnf5 -y copr enable ublue-os/staging
-# dnf5 -y install kodi
+# dnf5 -y install package
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
-sudo dnf5 copr enable @kdesig/kde-beta
-
-sudo dnf5 -y update
-sudo dnf5 -y install @kde-desktop-environment
-
-sudo dnf5 copr enable @kdesig/kde-beta
-
-dnf -y install http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
-#dnf -y install http://download1.rpmfusion.org/nonfree/fedora/rpmfusion-nonfree-release-$(rpm -E %fedora).noarch.rpm
-
-dnf -yy install kodi
-
-dnf5 -y remove rpmfusion-free-releas
-#dnf5 -y remove rpmfusion-nonfree-release
-
-#sed 's/#logind-check-graphical.*/logind-check-graphical=true/g' -i /etc/lightdm/lightdm.conf
 
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
-
-#SE Linux changes as suggested by alerts 
-#setsebool -P polyinstantiation_enabled 1
-#ausearch -c 'systemd-logind' --raw | audit2allow -M my-systemdlogind
-#semodule -X 300 -i my-systemdlogind.pp
-#switchdesk xfce
-
