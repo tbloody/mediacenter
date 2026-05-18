@@ -24,8 +24,8 @@ dnf5 install -y nvim
 # dnf5 -y copr disable ublue-os/staging
 sudo dnf5 copr enable @kdesig/kde-beta
 
-sudo dnf5 update
-sudo dnf5 install @kde-desktop-environment
+sudo dnf5 -y update
+sudo dnf5 -y install @kde-desktop-environment
 
 sudo dnf5 copr enable @kdesig/kde-beta
 
