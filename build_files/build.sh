@@ -20,7 +20,7 @@ dnf5 install -y nvim
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
 
-sudo dnf5 copr enable @kdesig/kde-beta
+sudo dnf5 -y copr enable @kdesig/kde-beta
 
 sudo dnf5 -y update
 sudo dnf5 -y install @kde-desktop-environment
