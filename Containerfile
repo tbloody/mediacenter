@@ -3,7 +3,7 @@ FROM scratch AS ctx
 COPY build_files /
 
 # Base Image
-FROM ghcr.io/renner0e/kde-dev:sha256-e2921ca3cc9921f6a1d726a96bced8d3e7cef38cb39f70e6522b90bb7110649e
+FROM ghcr.io/ublue-os/aurora:daily
 ## Other possible base images include:
 # FROM ghcr.io/ublue-os/bazzite:latest
 # FROM ghcr.io/ublue-os/bluefin-nvidia:stable
