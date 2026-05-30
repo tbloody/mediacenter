@@ -24,9 +24,9 @@ dnf5 -y copr enable ublue-os/staging
 sudo dnf5 -y copr enable @kdesig/kde-beta
 
 sudo dnf5 -y update
-sudo dnf5 -y install @kde-desktop-environment
+#sudo dnf5 -y install @kde-desktop-environment
 
-dnf5 copr disable @kdesig/kde-beta
+dnf5 copr disable @kdesig/plasma-6.7-beta
 dnf5 -y copr disable ublue-os/staging
 
 dnf5 -y install http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
