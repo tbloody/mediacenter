@@ -24,9 +24,9 @@ dnf5 install -y nvim
 
 #sudo dnf5 -y update
 #sudo dnf5 -y install @kde-desktop-environment
-#sudo dnf5 -y install plasma-bigscreen
+sudo dnf5 -y install plasma-bigscreen
 #dnf5 copr disable @kdesig/plasma-6.7-beta
-dnf5 install -y @xfce-desktop-environment
+#dnf5 install -y @xfce-desktop-environment
 
 dnf5 -y install http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
 
