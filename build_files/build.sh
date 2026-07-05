@@ -26,8 +26,9 @@ sudo dnf5 -y install plasma-bigscreen
 
 sudo flatpak install app/tv.kodi.Kodi/x86_64/stable -y
 sudo flatpak install app/org.jellyfin.JellyfinDesktop/x86_64/stable -y
-
 sudo flatpak install app/tv.plex.PlexDesktop/x86_64/stable -y
+sudo flatpak install app/rocks.shy.VacuumTube/x86_64/stable -y
+
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
