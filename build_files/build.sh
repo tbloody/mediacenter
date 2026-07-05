@@ -20,20 +20,14 @@ dnf5 install -y nvim
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
 
-#sudo dnf5 -y copr enable @kdesig/plasma-6.7-beta
 
-#sudo dnf5 -y update
-#sudo dnf5 -y install @kde-desktop-environment
+sudo dnf5 -y update
 sudo dnf5 -y install plasma-bigscreen
-#dnf5 copr disable @kdesig/plasma-6.7-beta
-#dnf5 install -y @xfce-desktop-environment
 
-dnf5 -y install http://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+sudo flatpak install app/tv.kodi.Kodi/x86_64/stable -y
+sudo flatpak install app/org.jellyfin.JellyfinDesktop/x86_64/stable -y
 
-dnf5 -yy install kodi
-
-dnf5 -y remove rpmfusion-free-release
-
+sudo flatpak install app/tv.plex.PlexDesktop/x86_64/stable -y
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
