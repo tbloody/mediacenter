@@ -24,6 +24,8 @@ dnf5 install -y nvim
 dnf5 -y update
 dnf5 -y install plasma-bigscreen
 
+flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
 flatpak install app/tv.kodi.Kodi/x86_64/stable -y
 flatpak install app/org.jellyfin.JellyfinDesktop/x86_64/stable -y
 
