@@ -30,6 +30,8 @@ flatpak install app/tv.kodi.Kodi/x86_64/stable -y
 flatpak install app/org.jellyfin.JellyfinDesktop/x86_64/stable -y
 
 flatpak install app/tv.plex.PlexDesktop/x86_64/stable -y
+
+ujust install-vpn
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
