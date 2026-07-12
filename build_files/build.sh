@@ -22,7 +22,6 @@ dnf5 install -y nvim
 
 
 dnf5 -y update
-dnf5 -y install kdeconnect
 dnf5 -y install plasma-bigscreen
 
 
@@ -33,7 +32,6 @@ flatpak install app/org.jellyfin.JellyfinDesktop/x86_64/stable -y
 
 flatpak install app/tv.plex.PlexDesktop/x86_64/stable -y
 
-ujust install-vpn
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
