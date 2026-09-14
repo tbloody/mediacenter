@@ -11,7 +11,7 @@ set -ouex pipefail
 
 # this installs a package from fedora repos
 dnf5 -y update
-dnf5 install -y tmux nvim kde
+dnf5 install -y nvim kde
 
 # Use a COPR Example:
 #
