@@ -10,8 +10,8 @@ set -ouex pipefail
 # https://mirrors.rpmfusion.org/mirrorlist?path=free/fedora/updates/43/x86_64/repoview/index.html&protocol=https&redirect=1
 
 # this installs a package from fedora repos
-dnf5 install -y tmux 
-dnf5 install -y nvim 
+dnf5 -y update
+dnf5 install -y tmux nvim kde
 
 # Use a COPR Example:
 #
@@ -20,17 +20,18 @@ dnf5 install -y nvim
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
 
-
-dnf5 -y update
-dnf5 -y install plasma-bigscreen
-
+dnf5 -y install plasma-bigscreen krfb-virtualmonitor
 
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+
+flatpak install app/com.github.tchx84.Flatseal  
+flatpak install app/io.github.kolunmi.Bazaar 
 
 flatpak install app/tv.kodi.Kodi/x86_64/stable -y
 flatpak install app/org.jellyfin.JellyfinDesktop/x86_64/stable -y
 
 flatpak install app/tv.plex.PlexDesktop/x86_64/stable -y
+
 
 #### Example for enabling a System Unit File
 
