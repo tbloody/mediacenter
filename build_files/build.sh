@@ -25,8 +25,8 @@ dnf5 -y install krfb-virtualmonitor
 
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
-flatpak install app/com.github.tchx84.Flatseal  
-flatpak install app/io.github.kolunmi.Bazaar 
+flatpak install app/com.github.tchx84.Flatseal -y
+flatpak install app/io.github.kolunmi.Bazaar -y
 
 flatpak install app/tv.kodi.Kodi/x86_64/stable -y
 flatpak install app/org.jellyfin.JellyfinDesktop/x86_64/stable -y
