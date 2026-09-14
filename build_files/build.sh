@@ -11,7 +11,8 @@ set -ouex pipefail
 
 # this installs a package from fedora repos
 dnf5 -y update
-dnf5 install -y nvim kde
+dnf5 install -y nvim 
+dnf5 install -y kde
 
 # Use a COPR Example:
 #
@@ -20,7 +21,8 @@ dnf5 install -y nvim kde
 # Disable COPRs so they don't end up enabled on the final image:
 # dnf5 -y copr disable ublue-os/staging
 
-dnf5 -y install plasma-bigscreen krfb-virtualmonitor
+dnf5 -y install plasma-bigscreen 
+dnf5 -y install krfb-virtualmonitor
 
 flatpak remote-add --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
 
